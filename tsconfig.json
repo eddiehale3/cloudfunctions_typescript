@@ -1,0 +1,21 @@
+{
+  "compileOnSave": true,
+    "compilerOptions": {
+      "target": "es6",                          
+      "module": "commonjs",                     
+      "lib": ["es6"],
+      "strictNullChecks": false,
+      "allowJs": true,                       
+      "checkJs": false,                       
+      "outDir": "build",                        
+      "rootDir": "./src",                         
+      "removeComments": true, 
+      "strict": true,                           
+      "esModuleInterop": true,                  
+      "resolveJsonModule": true,                
+      "skipLibCheck": true,                     
+      "forceConsistentCasingInFileNames": true  
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "*/__mocks/**","**/fixtures/**","./mock/**"]
+  }

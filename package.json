@@ -1,0 +1,23 @@
+{
+  "name": "basic_container",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --coverage", 
+    "gcp-build": "tsc"
+  },
+  "keywords": [],
+  "author": "Eddie Hale",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/jest": "^26.0.23",
+    "express-request-mock": "^3.1.0",
+    "jest": "^27.0.1",
+    "jest-junit": "^12.1.0",
+    "ts-jest": "^27.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
