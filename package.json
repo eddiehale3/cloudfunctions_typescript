@@ -1,5 +1,5 @@
 {
-  "name": "basic_container",
+  "name": "cloudfunctions_typescript",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -15,6 +15,7 @@
     "@types/jest": "^26.0.23",
     "express-request-mock": "^3.1.0",
     "jest": "^27.0.1",
+    "jest-cli": "^27.1.1",
     "jest-junit": "^12.1.0",
     "ts-jest": "^27.0.1",
     "ts-node": "^10.0.0",
@@ -25,15 +26,21 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "testTimeout": 10000,
-    "roots": ["<rootDir>/src"
+    "roots": [
+      "<rootDir>/src"
     ],
     "collectCoverageFrom": [
-        "src /**/*.ts",
-        "!src /**/*.d.ts"
+      "src /**/*.ts",
+      "!src /**/*.d.ts"
     ],
-    "reporters": ["default", "jest-junit"
+    "reporters": [
+      "default",
+      "jest-junit"
     ],
-    "coverageReporters": ["lcov", "text", "cobertura"
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "cobertura"
     ],
     "coverageThreshold": {
       "global": {
