@@ -13,5 +13,5 @@ steps:
 
 # Deploy Function
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'demo-function', '--trigger-http', '--runtime', 'nodejs14', '--entry-point', 'helloWorld']
+  args: ['functions', 'deploy', 'demo-function', '--trigger-http', '--runtime', 'nodejs14', '--entry-point', 'helloWorld', '--allow-unauthenticated']
   dir: 'build'
