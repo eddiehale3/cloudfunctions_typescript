@@ -15,7 +15,3 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'demo-function', '--trigger-http', '--runtime', 'nodejs14', '--entry-point', 'helloWorld', '--allow-unauthenticated']
   dir: 'build'
-
-# Make function publically available
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'add-iam-policy-binding', 'demo-function', '--member="allUsers"', '--role="roles/cloudfunctions.invoker"']
