@@ -7,5 +7,5 @@
 import { Request, Response } from 'express';
 
 export const helloWorld = (_: Request, res: Response) => {
-    res.status(200).send('Hello World!');
+    res.status(200).send('Go Hogs, beat Aggies!!');
 }
