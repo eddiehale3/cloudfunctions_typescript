@@ -19,3 +19,10 @@ gcloud beta builds triggers create cloud-source-repositories \
 --branch-pattern="^master$" \
 --build-config="cloudbuild.yaml"
 ```
+
+## Permissions 
+To allow public access to the function run the following command:
+
+```
+gcloud functions add-iam-policy-binding demo-function --member="allUsers" --role="roles/cloudfunctions.invoker"
+```
