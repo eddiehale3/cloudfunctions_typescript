@@ -5,5 +5,5 @@ test('index returns 200 and expected text', async () => {
     const { res } = await expressRequestMock(helloWorld);
     
     expect(res.statusCode).toEqual(200);
-    expect(res._getData()).toBe('Hello World!');
+    expect(res._getData()).toBe('Go Hogs, Beat Aggies!!');
 });
