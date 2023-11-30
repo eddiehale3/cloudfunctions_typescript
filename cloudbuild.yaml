@@ -1,17 +1,28 @@
 steps:
-# Install Dependencies
-- name: 'gcr.io/cloud-builders/npm'  # container image to run the task
-  args: ['install']                  # list of arguments
+  # Install Dependencies
+  - name: "gcr.io/cloud-builders/npm" # container image to run the task
+    args: ["install"] # list of arguments
 
-# Unit Tests
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['test']
+  # Unit Tests
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["test"]
 
-# Build Function
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'gcp-build']
+  # Build Function
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["run", "gcp-build"]
 
-# Deploy Function
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'demo-function', '--trigger-http', '--runtime', 'nodejs14', '--entry-point', 'helloWorld', '--allow-unauthenticated']
-  dir: 'build'
+  # Deploy Function
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "functions",
+        "deploy",
+        "demo-function",
+        "--trigger-http",
+        "--runtime",
+        "nodejs20",
+        "--entry-point",
+        "helloWorld",
+        "--allow-unauthenticated",
+      ]
+    dir: "build"
